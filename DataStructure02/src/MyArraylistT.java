@@ -1,18 +1,18 @@
 import java.security.InvalidParameterException;
 import java.util.Arrays;
 
-public class MyArraylistT {
-	private int[] data;
+public class MyArraylistT <T>{
+	private T[] data;
 	private int size ;
 	
 	public MyArraylistT() {
 		size = 0;
-		data = new int[10];
+		data = (T[])(new Object[10]);
 	}
 	
-	public void add(int x) {
+	public void add(T x) {
 		if(size >= data.length) {
-			int [] data2 = new int[data.length*2];
+			T [] data2 = (T[])(new Object[data.length*2]);
 			for( int i = 0; i < data.length; i++) {
 				data2[i] = data[i];
 			}
@@ -22,22 +22,22 @@ public class MyArraylistT {
 		size++;
 	}
 	
-	public int get(int index) {
+	public T get(int index) {
 		if(index < 0 || index >= size) {
 			throw new InvalidParameterException("index out of bound: "+ index);
 		}
 		return data[index];
 	}
 	
-	public void set(int x, int index) {
+	public void set(T x, int index) {
 		if(index < 0 || index >= size) {
 			throw new InvalidParameterException("index out of bound: "+ index);
 		}
 		data[index] = x;
 	}
 	
-	public int[] toArray() {
-		int[] x = new int[size];
+	public T[] toArray() {
+		T [] x = (T[])(new Object[size]);
 		for(int i = 0; i < x.length; i++) {
 			x[i] = data[i];
 		}
@@ -45,7 +45,11 @@ public class MyArraylistT {
 	}
 	
 	public String toString() {
-		int [] x = toArray();
+		T [] x  = toArray();
 		return Arrays.toString(x);
+	}
+	
+	public int size() {
+		return size;
 	}
 }

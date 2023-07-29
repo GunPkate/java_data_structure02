@@ -34,6 +34,6 @@ public class Particle {
 	
 	public void draw(Graphics g) {
 		g.setColor(color);
-		g.fillOval((int)x, (int)y, 5, 5);
+		g.fillOval((int)x, (int)y, 8, 8);
 	}
 }
