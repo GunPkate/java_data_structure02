@@ -36,4 +36,8 @@ public class Particle {
 		g.setColor(color);
 		g.fillOval((int)x, (int)y, 8, 8);
 	}
+	
+	public boolean isAlive() {
+		return isAlive;
+	}
 }

@@ -52,4 +52,16 @@ public class MyArraylistT <T>{
 	public int size() {
 		return size;
 	}
+	
+	public void removeAt(int index) {
+		if(index < 0 || index >= size) {
+			throw new InvalidParameterException("index out of bound: "+ index);
+		}
+		
+		for (int i = index; index < size; index++) {
+			data[i] = data[i+1];
+		}
+		size--;
+	}
+	
 }
