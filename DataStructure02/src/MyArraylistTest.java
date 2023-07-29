@@ -8,6 +8,7 @@ public class MyArraylistTest {
 		}
 		l.set(4400, 2);
 		l.get(3);
+		l.add(3);
 		System.out.println(l.toString());
 		System.out.println(l.get(3));
 	}
