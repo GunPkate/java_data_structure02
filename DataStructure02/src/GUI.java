@@ -17,7 +17,7 @@ public class GUI extends JPanel {
 						int n = (int)(Math.random()*50);
 						for (int i = 0; i < n; i++) {
 							list.add(n);
-						}
+						}// add particle to list
 					}		
 				}
 			}
@@ -30,9 +30,9 @@ public class GUI extends JPanel {
 		f.setVisible(true);
 	}
 	
-	public void paint(Graphics g) {
-		
-	}
+//	public void paint(Graphics g) {
+//		
+//	}
 	
 	public static void main(String args[]) {
 		new GUI();
