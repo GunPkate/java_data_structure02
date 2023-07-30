@@ -28,6 +28,13 @@ public class GUI extends JPanel {
 							list.get(i).move();				
 						}
 						
+						for (int i = 0; i < list.size(); i++) {
+							if (!list.get(i).isAlive()) {								
+								list.removeAt(i);
+								i--;
+							}//when removed size reduce
+						}
+						
 						repaint();
 					}		
 				}
